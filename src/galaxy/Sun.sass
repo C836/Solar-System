@@ -1,0 +1,45 @@
+.orbit 
+    position: absolute
+    top: 50%
+    left: 50%
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    border-radius: 50%
+    animation-name: orbit
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    transform-style: preserve-3d
+
+.pos
+    left: 50%
+    position: absolute
+    transform-style: preserve-3d
+    animation-name: invert
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    animation-duration: 3s
+
+.planet 
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    img
+        width: 100%
+
+#sun, .planet 
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 1em
+  height: 1em
+  margin-top: -0.5em
+  margin-left: -0.5em
+  border-radius: 50%
+
+#sun 
+  font-size: 5em
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url(data:image/png;base64,iVBORw0KG...AAASUVORK5CYII=)
+  background-color: #FB7209
+  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4)
+  transform: rotateX(-75deg)
+  z-index: 1

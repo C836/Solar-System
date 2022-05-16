@@ -1,9 +1,9 @@
-import Canva from './canva/Canva'
+import Galaxy from './galaxy/Galaxy'
 
 function App() {
   return (
     <div className="App">
-      <Canva />
+      <Galaxy />
     </div>
   );
 }

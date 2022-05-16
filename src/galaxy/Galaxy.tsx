@@ -1,19 +1,16 @@
-import './Canva.sass'
-import './System.sass'
-
-import Earth from '../planets/selected/Earth'
+import './Sun.sass'
+import './Galaxy.sass'
+import Mercury from '../components/planets/mercury/Mercury'
+import Venus from '../components/planets/venus/Venus'
 
 function Canva(){
     return(
         <section className='galaxy'>
-            <div className='planets'>
+            <div className='planets_wrapper'>
                 <div id="sun" />
                     
-                <div id="mercury" className="orbit">
-                    <div className='pos'>
-                        <div className="planet"/>
-                    </div>
-                </div>
+                <Mercury />
+                <Venus />
 
                 {/* <figure>
                     <img src={Earth.selected.picture} />
