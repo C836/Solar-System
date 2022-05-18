@@ -1,45 +1,58 @@
 .orbit 
-    position: absolute
-    top: 50%
-    left: 50%
-    border: 1px solid rgba(255, 255, 255, 0.2)
-    border-radius: 50%
-    animation-name: orbit
-    animation-iteration-count: infinite
-    animation-timing-function: linear
-    transform-style: preserve-3d
+  position: absolute
+  top: 50%
+  left: 50%
+  border: 1px solid rgba(255, 255, 255, 0.76)
+  border-radius: 50%
+  animation-name: orbit
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  transform-style: preserve-3d
 
 .pos
-    left: 50%
-    position: absolute
-    transform-style: preserve-3d
-    animation-name: invert
-    animation-iteration-count: infinite
-    animation-timing-function: linear
-    animation-duration: 3s
+  left: 50%
+  position: absolute
+  transform-style: preserve-3d
+  animation-name: invert
+  transform: rotateX(-90deg) rotateY(90deg) rotateZ(0deg)
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  animation-duration: 3s
 
-.planet 
-    animation-iteration-count: infinite
-    animation-timing-function: linear
-    img
-        width: 100%
+.planet
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  img
+      width: 100%
 
 #sun, .planet 
   position: absolute
   top: 50%
   left: 50%
-  width: 1em
-  height: 1em
-  margin-top: -0.5em
-  margin-left: -0.5em
+  width: 2em
+  height: 2em
+  margin-top: -1em
+  margin-left: -1em
   border-radius: 50%
 
-#sun 
+#sun
+  opacity: 0.2 
   font-size: 5em
   background-repeat: no-repeat
-  background-size: cover
-  background-image: url(data:image/png;base64,iVBORw0KG...AAASUVORK5CYII=)
-  background-color: #FB7209
-  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4)
+  background-image: url(../assets/images/sun.png)
+  background-size: contain
+  box-shadow: 0 0 60px rgba(255, 136, 0, 0.514)
   transform: rotateX(-75deg)
   z-index: 1
+
+@keyframes orbit 
+  0%   
+    transform: rotateZ(0deg)
+  100% 
+    transform: rotateZ(-360deg)
+
+@keyframes invert 
+  0%   
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg)
+  100% 
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)

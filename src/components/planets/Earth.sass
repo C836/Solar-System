@@ -1,0 +1,39 @@
+$baseSize: 9px
+
+#earth.orbit 
+  width: 18em
+  height: 18em
+  margin-top: -9em
+  margin-left: -9em
+
+  animation-duration: 6s
+
+#earth .planet 
+  width: $baseSize
+  height: $baseSize
+  margin-left: -5px
+  margin-top: -6px
+  left: 0%
+  top: 50%
+  
+  background-image: url(../../assets/images/earth.png)
+  background-size: contain
+
+  animation: earth-shadow 6s linear infinite
+
+#earth .pos
+  animation-duration: 6s
+
+@keyframes earth-shadow
+  0%  
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.75),
+  25%    
+      box-shadow: inset ($baseSize/2) 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
+  50%    
+      box-shadow: inset $baseSize (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.75)
+  50.01% 
+      box-shadow: inset (-$baseSize) (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.75)
+  75%    
+      box-shadow: inset (-$baseSize)/2 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
+  100%   
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.75)

@@ -1,0 +1,39 @@
+$baseSize: 7px
+  
+#mars.orbit 
+  width: 24em
+  height: 24em
+  margin-top: -12em
+  margin-left: -12em
+
+  animation-duration: 11.20s
+
+#mars .planet 
+  width: $baseSize
+  height: $baseSize
+  margin-left: -3.75px
+  margin-top: -4px
+  left: 0%
+  top: 50%
+  
+  background-image: url(../../assets/images/mars.png)
+  background-size: contain
+
+  animation: mars-shadow 11.20s linear infinite
+
+#mars .pos
+  animation-duration: 11.20s
+
+@keyframes mars-shadow
+  0%  
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.75),
+  25%    
+      box-shadow: inset ($baseSize/2) 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
+  50%    
+      box-shadow: inset $baseSize (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.75)
+  50.01% 
+      box-shadow: inset (-$baseSize) (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.75)
+  75%    
+      box-shadow: inset (-$baseSize)/2 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
+  100%   
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.75)

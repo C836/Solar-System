@@ -1,0 +1,39 @@
+$baseSize: 55px
+  
+#jupiter.orbit 
+  width: 50em
+  height: 50em
+  margin-top: -25em
+  margin-left: -25em
+
+  animation-duration: 71s
+
+#jupiter .planet 
+  width: $baseSize
+  height: $baseSize
+  left: 0%
+  top: 50%
+  margin-top: -2em
+  margin-left: -1.7em
+  
+  background-image: url(../../assets/images/jupiter.png)
+  background-size: contain
+
+  animation: jupiter-shadow 71s linear infinite
+
+#jupiter .pos
+  animation-duration: 71s
+
+@keyframes jupiter-shadow
+  0%  
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.75),
+  25%    
+      box-shadow: inset ($baseSize/2) 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
+  50%    
+      box-shadow: inset $baseSize (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.75)
+  50.01% 
+      box-shadow: inset (-$baseSize) (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.75)
+  75%    
+      box-shadow: inset (-$baseSize)/2 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
+  100%   
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.75)
