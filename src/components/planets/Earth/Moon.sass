@@ -1,0 +1,48 @@
+$baseSize: 3px
+
+#moon.orbit
+  width: 1.5em
+  height: 1.5em
+  margin-top: -0.80em
+  margin-left: -0.80em
+  animation: moon-orbit 1s infinite linear
+
+#moon .planet
+  width: $baseSize
+  height: $baseSize
+  margin-top: -0.1em
+  margin-left: -0.1em
+  left: 0%
+  top: 50%
+  background-image: url(../../../assets/images/moon.png)
+  background-size: contain
+  animation: moon-shadow 6s linear infinite, moon-planet 1s linear infinite
+
+#moon .pos
+  animation-duration: 1s
+
+@keyframes moon-orbit
+  0%
+    transform: rotateX(-90deg) rotateY(6deg) rotateZ(0deg)
+  100%
+    transform: rotateX(-90deg) rotateY(6deg) rotateZ(360deg)
+
+@keyframes moon-planet
+  0%
+    transform: rotateY(0deg) 
+  100%
+    transform: rotateY(720deg) 
+
+@keyframes moon-shadow
+  0%
+    box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.85),
+  25%
+    box-shadow: inset ($baseSize/2) 0 ($baseSize/3) rgba(0, 0, 0, 0.85)
+  50%
+    box-shadow: inset $baseSize (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.85)
+  50.01% 
+    box-shadow: inset (-$baseSize) (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.85)
+  85%
+    box-shadow: inset (-$baseSize)/2 0 ($baseSize/3) rgba(0, 0, 0, 0.85)
+  100%
+    box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.85)

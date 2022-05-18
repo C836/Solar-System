@@ -1,30 +1,30 @@
-$baseSize: 9px
+$baseSize: 25px
+  
+#neptune.orbit 
+  width: 300em
+  height: 300em
+  margin-top: -150em
+  margin-left: -150em
 
-#earth.orbit 
-  width: 18em
-  height: 18em
-  margin-top: -9em
-  margin-left: -9em
+  animation-duration: 60s
 
-  animation-duration: 6s
-
-#earth .planet 
+#neptune .planet 
   width: $baseSize
   height: $baseSize
-  margin-left: -5px
-  margin-top: -6px
   left: 0%
   top: 50%
-  
-  background-image: url(../../assets/images/earth.png)
+  margin-top: -0.9em
+  margin-left: -0.8em
+
+  background-image: url(../../assets/images/neptune.png)
   background-size: contain
 
-  animation: earth-shadow 6s linear infinite
+  animation: neptune-shadow 60s linear infinite
 
-#earth .pos
-  animation-duration: 6s
+#neptune .pos
+  animation-duration: 60s
 
-@keyframes earth-shadow
+@keyframes neptune-shadow
   0%  
       box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.85),
   25%    

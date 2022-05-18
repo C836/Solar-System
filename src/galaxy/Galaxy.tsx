@@ -18,8 +18,7 @@ const DraggableSpace = ({ children }:any) => {
 };
 
 function Canva(){
-    const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"]
-    //, "Uranus", "Neptune"
+    const simples = ["Mercury", "Venus", "Mars", "Jupiter", "Neptune"]
 
     return(
         <section className='galaxy'>
@@ -27,13 +26,32 @@ function Canva(){
                 <div className='planets_wrapper'>
                     <div id="sun" />
 
-                    {planets.map((item, index)=>(
+                    {simples.map((item, index)=>(
                         <section id={item.toLowerCase()} className="orbit">
                             <div className='pos'>
                                 <div className="planet"/>
                             </div>
                         </section>
                     ))}
+
+                    <section id="earth" className="orbit">
+                        <div className="pos">
+                            <div id="moon" className="orbit">
+                                <div className="pos">
+                                    <div className="planet"/>
+                                </div>
+                            </div>
+                            <div className="planet"/>
+                        </div>
+                    </section>
+
+                    <section id='uranus' className="orbit">
+                        <div className='pos'>
+                            <div className="planet">
+                                <div className="uranusRing"/>
+                            </div>
+                        </div>
+                    </section>
                     
                     <section id='saturn' className="orbit">
                         <div className='pos'>

@@ -1,0 +1,55 @@
+@import "./../../galaxy/Sun"
+  
+$baseSize: 35px
+$ringSize: ($baseSize*3)
+
+#saturn.orbit 
+  width: 90em
+  height: 90em
+  margin-top: -45em
+  margin-left: -45em
+
+  animation-duration: 176s
+
+#saturn .planet 
+  width: $baseSize
+  height: $baseSize
+  left: 0%
+  top: 50%
+  margin-top: -1.5em
+  margin-left: -1.42em
+  
+  background-image: url(../../assets/images/saturn.png)
+  background-size: contain
+
+  animation: saturn-shadow 176s linear infinite
+
+#saturn .pos
+  animation-duration: 176s
+
+.saturnRing
+  width: ($baseSize*1.775)
+  height: ($baseSize)
+
+  margin-top: 0.04em
+  margin-left: -0.91em
+
+  background: url(../../assets/images/saturn-ring.png)
+  background-size: contain
+
+  opacity: 0.5
+
+@keyframes saturn-shadow
+  0%  
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.85),
+  25%    
+      box-shadow: inset ($baseSize/2) 0 ($baseSize/3) rgba(0, 0, 0, 0.85)
+  50%    
+      box-shadow: inset $baseSize (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.85)
+  50.01% 
+      box-shadow: inset (-$baseSize) (-$baseSize) ($baseSize/3) rgba(0, 0, 0, 0.85)
+  75%    
+      box-shadow: inset (-$baseSize)/2 0 ($baseSize/3) rgba(0, 0, 0, 0.85)
+  100%   
+      box-shadow: inset 0 0 ($baseSize/3) rgba(0, 0, 0, 0.85)
+  
